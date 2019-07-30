@@ -1,7 +1,7 @@
-/* Generic types to remove duplication of code      ----------------------------------------------------------------------------------- 
-by extracting a function   
+/* Generic types to remove duplication of code -
+by extracting a function    */
 
-1) Short program that finds the largest number in a list:    */ 
+// 1) Short program that finds the largest number in a list:    ----------------------------------------------------------------------------
 
 fn main() {
     let number_list= vec! [34, 50, 25, 100, 65]; 
@@ -67,5 +67,4 @@ To eliminate this duplication, create an abstraction by defining a function that
 /* 
 - Using the Clone trait instead of Copy - potentially making more heap allocations which can be slow.
 - Another solution is changing the return value to &T instead of T - so we dont need any other traits nor heap allocations.  */ 
-
 }
