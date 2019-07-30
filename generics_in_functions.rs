@@ -8,7 +8,7 @@ fn main() {
 
     let mut largest_number= number_list [0]; 
     
-    for number in number_list {
+    for number in number_list {         // number_list values are moved here, std::vec::Vec<i32> doesn't implement the `Copy` trait
         if number > largest_number {
             largest_number= number; 
         }
@@ -34,9 +34,7 @@ To eliminate this duplication, create an abstraction by defining a function that
         
         largest
     }
-
-    println! ("The largest number in the previous number_list is: {}", largest (&number_list)); 
-    
+   
     let number_list= vec! [30, 400, 500, 200, 800];     // override previous number_list 
     let result= largest (&number_list); 
     println! ("The largest number is {}", result); 
