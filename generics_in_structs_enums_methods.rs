@@ -6,6 +6,8 @@
 
 fn main() {
 
+    
+    
 // 1) In STRUCT DEFINITIONS (in one or more fields using the <> syntax):
 
     struct Point <T> {      //to hold x and y coordinate values of any type - the Point<T> struct is generic over some type T - 
@@ -24,6 +26,8 @@ fn main() {
 
     let integer_float= Point2 {x: 10, y: 10.0}; 
 
+    
+    
 // 2) In ENUM DEFINITIONS - enums to hold generic data types in their variants:
 
     enum Option <T> {       //Option is a std lib enum generic over type T - 
@@ -36,6 +40,8 @@ fn main() {
         Err (E),        //Err holds a value type E (e.g. E: std::io::Error) - 
     }
 
+    
+    
 // 3) In METHOD DEFINITIONS:
 
     impl <T> Point <T> {        //method y implemented on the struct Point with fields of type generic -
