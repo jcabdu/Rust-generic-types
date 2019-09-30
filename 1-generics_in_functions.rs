@@ -1,7 +1,6 @@
 // GENERIC TYPES
-// Remove duplication of code by extracting a function
 
-// 1) Short program that finds the largest number in a list:
+// (1) Short program that finds the largest number in a list:
 
 fn main() {
     let number_list= vec! [34, 50, 25, 100, 65]; 
@@ -22,7 +21,7 @@ fn main() {
 //  2. Extract the duplicate code into the body of the function and specify the inputs and return values of that code in the function signature.
 //  3. Update the two instances of duplicated code to call the function instead.    
 
-// 2) Finding the largest number in a list abstractly       
+// (2) Finding the largest number in a list abstractly - remove duplication of code by extracting a function:       
 
     fn largest (list: &[i32]) -> i32 {           //[i32] represents any concrete slice of i32 values -
         let mut largest= list [0];               //the fn body can operate on an abstract list instead of specific values, generics allow code to operate on abstract types -
@@ -44,7 +43,7 @@ fn main() {
     let result2= largest (&number_list_2); 
     println! ("The largest number in the second list is {}", result2);
 
-// 3) Generic function for lists of different types:
+// (3) Generic function for lists of different types: 
 //  fn name <T: trait bounds> (arguments) -> return-value
 
     fn generic_largest <T: PartialOrd + Copy> (list: &[T]) -> T {           //the fn generic_largest is generic over some type T of the list parameter that is a slice of values of type T - 
