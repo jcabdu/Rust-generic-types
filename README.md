@@ -1,5 +1,6 @@
-# Rust-generic-types
 Generic types in Rust: remove duplication of code and make the design more abstract.
+
+Info about: 
 
 1- generics as function arguments.
 
